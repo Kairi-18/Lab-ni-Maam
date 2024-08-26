@@ -41,11 +41,8 @@ public class activity {
       for (int j = i - 1; j >= 1; j--) {
           System.out.print(j + " ");
       }
-      
-      // Print trailing asterisk and move to the next line
       System.out.println("*");
-  }
-      
+      }  
     }
   }
 
