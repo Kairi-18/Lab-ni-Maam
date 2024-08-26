@@ -6,7 +6,7 @@ import java.util.Scanner;
 //This is the Class
 class Cylinder{
 
-  //Used protected to use any of the subclass that declares
+  //Using protected as variable in radius and height to use any of the subclass that declares
   protected int radius;
   protected int height;
 
@@ -29,7 +29,7 @@ class Cylinder{
 //A subclass of the Cyclinder which is the volume of the Cylinder
 class CylinderVol extends Cylinder{
 
-  //I use super to allow the subclass to have a refenerence of the Class(this is the flow of the protected of that i declared)
+  //Using super keyword to allow the subclass to have a reference to the Class(this is the flow of the protected variable that i declared)
   public CylinderVol(int radius, int height){
     super(radius, height);
   }
