@@ -1,4 +1,4 @@
-# Welcome to the **Lab-ni-Maam** repository!
+# Welcome to my **Laboratory Exercise** repository!
 
 This repository is dedicated to storing all of my laboratory exercises from Ma'am's class. Each folder represents a different lab session, containing the corresponding Java programs and activities assigned during the course.
 
