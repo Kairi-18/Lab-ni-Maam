@@ -67,7 +67,7 @@ public class activity {
     System.out.print("*");
   }
 
-  //this would be the output of my object program
+  //this would be the output of the program
   public static void main(String[] args) {
    //using scanner to input the values
     Scanner input = new Scanner(System.in);
