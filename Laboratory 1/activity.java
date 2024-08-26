@@ -3,16 +3,16 @@
 //I use package to my assigned folder of my code
 package wew;
 
-//used scanner to input the number of rows
+//using scanner to input the number of rows
 import java.util.Scanner;
 
 //start of the program
 public class activity {
 
-  //declare rows in private
+  //declare private variable in rows
   private int rows;
 
-  //make it public the private
+  //make the private variable go public
   public activity(int rows){
     this.rows = rows;
   }
@@ -31,8 +31,20 @@ public class activity {
 
  //function of the middle pattern
   private void middlePattern(){
-    for (int i = 1; i <= rows; i++){
+      for (int i = 1; i <= rows; i++) {
       System.out.print("*");
+      // Print increasing numbers
+      for (int j = 1; j <= i; j++) {
+          System.out.print(j + " ");
+      }
+      // Print decreasing numbers
+      for (int j = i - 1; j >= 1; j--) {
+          System.out.print(j + " ");
+      }
+      
+      // Print trailing asterisk and move to the next line
+      System.out.println("*");
+  }
       
     }
   }
@@ -41,9 +53,11 @@ public class activity {
   private void bottomPattern(){
     for (int i = rows - 1; i >= 1; i--){
       System.out.print("*");
+       // Print increasing numbers
       for (int j = 1; j <= i; j++){
         System.out.print(j + " ");
       }
+        // Print decreasing numbers
       for (int j = i -1; j >= 1; j--){
         System.out.print(j + " ");
       }
