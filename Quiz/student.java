@@ -3,18 +3,14 @@ import java.util.Scanner;
 public class student{
   static Scanner input = new Scanner(System.in);
 
-  //Decalre units and totalUnits as private
-  private int units;
   private int totalUnits;
 
   //To make it public
   public student(){
-    this.units = 0;
     this.totalUnits = 0;
   }
 
   public student(int units){
-    this.units = units;
     this.totalUnits = 0; 
   }
 
@@ -26,36 +22,38 @@ public class student{
     System.out.print("Enter Course: ");
     String course = input.nextLine();
 
+    System.out.print("\nEnter number of Subjects (Max. 10): ");
+        int subject = input.nextInt();
 
-    //using loop for input the subjects and units per subjects
-    for(int i = 1; i <=10; i++){
-      System.out.print("Enter Course Code: ");
-      String code = input.nextLine();
+        // Validate the maximum number of subjects
+        if (subject > 10) {
+            System.out.println("Error. Maximum number of subjects is 10.");
+            return; // Exit if invalid input
+        }
 
-      System.out.println("Subject: " + code);
+        // Loop through each subject
+        for (int i = 1; i <= subject; i++) {
+            input.nextLine(); // Consume the newline character
+            System.out.print("\nEnter Course Code for Subject " + i + ": ");
+            String code = input.nextLine();
 
-      if(i <= 10){
-        System.out.print("Number of Units: ");
-        units = input.nextInt();
+            System.out.print("Number of Units for " + code + ": ");
+            int units = input.nextInt();
 
-          if (units >= 1 && units <= 5) {
-            totalUnits += units;
-            System.out.println("Number of Units from " + code + " of Subject no. " + i + " is " + units);
-          }else{
-            System.out.println("Error. Please Enter number of units between 1 and 5.");
-            i--; //Repeat the same index for invalid input
-          }
-          input.nextLine();
-      }else{
-        System.out.println("Enter invalid");
-      }
+            // Validate the number of units
+            if (units >= 1 && units <= 5) {
+                totalUnits += units;
+            } else {
+                System.out.println("Error. Please enter number of units between 1 and 5.");
+                i--; // Repeat the same index for invalid input
+            }
+        }
+
+        System.out.println("\nStudent Name: " + name);
+        System.out.println("Course: " + course);
+        System.out.println("Total Units: " + totalUnits);
+        System.out.println("Total enrollment fee: " + NumberOfUnitsToCompute());
     }
-    //The Output
-    System.out.println("Student Name: " + name);
-    System.out.println("Course: " + course);
-    System.out.println("Total Units per Subjects: " + totalUnits);
-    System.out.println("Total enrollment fee: " + NumberOfUnitsToCompute());
-  }
 
   //Calculation of fee per units
   public double NumberOfUnitsToCompute(){
@@ -71,7 +69,7 @@ public class student{
     double remainingBalance = totalAmount;
 
     while (true) {
-      System.out.print("Please enter the amount to pay: " );
+      System.out.print("\nPlease enter the amount to pay: " );
       payment = input.nextInt();
 
       if (payment <= 0) {
