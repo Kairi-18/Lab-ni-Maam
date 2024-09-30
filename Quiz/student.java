@@ -3,9 +3,11 @@ import java.util.Scanner;
 public class student{
   static Scanner input = new Scanner(System.in);
 
+  //Decalre units and totalUnits as private
   private int units;
   private int totalUnits;
 
+  //To make it public
   public student(){
     this.units = 0;
     this.totalUnits = 0;
@@ -16,6 +18,7 @@ public class student{
     this.totalUnits = 0; 
   }
 
+  //All user input is based from this structured
   public void AllInformation(){
     System.out.print("Enter student Name: ");
     String name = input.nextLine();
@@ -24,7 +27,7 @@ public class student{
     String course = input.nextLine();
 
 
-    
+    //using loop for input the subjects and units per subjects
     for(int i = 1; i <=10; i++){
       System.out.print("Enter Course Code: ");
       String code = input.nextLine();
@@ -47,16 +50,19 @@ public class student{
         System.out.println("Enter invalid");
       }
     }
+    //The Output
     System.out.println("Student Name: " + name);
     System.out.println("Course: " + course);
     System.out.println("Total Units per Subjects: " + totalUnits);
     System.out.println("Total enrollment fee: " + NumberOfUnitsToCompute());
   }
 
+  //Calculation of fee per units
   public double NumberOfUnitsToCompute(){
     return totalUnits * 1000;
   }
 
+  //Payment Method
   public void Payment(){
     double totalAmount = NumberOfUnitsToCompute();
     System.out.println("Total enrollment fee: " + totalAmount);
@@ -88,6 +94,7 @@ public class student{
   }
 
   public static void main(String[] args) {
+    //To Call out the functions
     student stu = new student();
     stu.AllInformation();
     stu.Payment();
