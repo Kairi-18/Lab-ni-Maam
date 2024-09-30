@@ -49,7 +49,8 @@ public class student{
             }
         }
 
-        System.out.println("\nStudent Name: " + name);
+        System.out.println("\n---STUDENT INFORMATION---");
+        System.out.println("Student Name: " + name);
         System.out.println("Course: " + course);
         System.out.println("Total Units: " + totalUnits);
         System.out.println("Total enrollment fee: " + NumberOfUnitsToCompute());
