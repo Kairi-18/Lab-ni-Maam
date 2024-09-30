@@ -5,7 +5,7 @@ This repository is dedicated to storing all of my laboratory exercises from Ma'a
 ## Repository Structure
 - **Laboratory 1:** Contains the Java programs and exercises from the first lab session.
 - **Laboratory 2:** Contains the Java programs and exercises from the second lab session.
-- **Laboratory 3:** **Group Activity** - Contains the Java programs and exercises from the third lab session, completed as a group project.
+- **Laboratory 3:** **Group Activity** - Contains the Java programs and exercises from the third lab session.
 - **Quizzes:** Contains the quizzes and assessments conducted throughout the course.
 
 ## Purpose
